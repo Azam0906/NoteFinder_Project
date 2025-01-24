@@ -1,4 +1,4 @@
-import re  #when, how, why
+import re 
 
 class WordSearcher:
     def __init__(self):
