@@ -1,35 +1,48 @@
 
 # Note Finder
 
-The Note Finder Tool is a Python script designed to search for occurrences of a specified word within one or more text files. Users can input file paths interactively, allowing flexibility in selecting files for analysis. The script utilizes Python's re module for efficient regular expression-based searching, enabling users to find exact matches or patterns within the text file/files.
-
+The Note Finder Tool is a Python application with a GUI built using Tkinter. It allows users to search for occurrences of a specified word within one or more text files. Users can interactively select files, enter a search word, and view results in an easy-to-use interface.
 
 
 
 ## Features
-File Selection: Users can input multiple file paths or directories to search through, providing flexibility in analyzing various text sources.
+- **Graphical File Selection**: Browse and select multiple text files using a file dialog.
+- **File Management**: View selected files in a listbox and clear the list as needed.
+- **Regex Support**: Utilize regular expressions for advanced pattern matching (case-insensitive by default).
+- **Results Display**: View matches with file names, line numbers, and context within an integrated text box.
+- **Error Handling**: Clear error messages for missing files or invalid inputs via dialog boxes.
+- **Cross-Platform**: Works on Windows, macOS, and Linux (with proper Tkinter support).
 
-Interactive Input: The tool prompts users to enter file paths until they indicate they have finished ('done'), making it easy to customize the scope of the search.
 
-Regex-based Search: Supports advanced searching using regular expressions, allowing for complex pattern matching beyond simple word searches.
-
-Detailed Output: When a match is found, the tool displays the specific line number and file name where each occurrence of the word is located, aiding in precise analysis.
-
-Error Handling: Basic error handling ensures smooth execution, notifying users if a specified file cannot be found.
-## Usage
+## Requirements
 *  Python 3.x
 * 're' module(standard library)
+* Tkinker
 
 ## Setup
-* Clone the repository : git clone https://github.com/your-username/your-repository.git
+* Clone the repository : ```git clone https://github.com/Azam0906/NoteFinder_Project.git```
 
-* Navigate to the directory : cd your-repository
+* Navigate to the directory(Project)
 
 ## Execution
 ### Input
-* Execute the script in your terminal.
+* Launch the Application : python Note_finder.py
+  (The GUI window will open.)
+
 * Enter the word you want to search.
+### Using the Application
+ Click **Add File(s)** to select text files for searching.
+- Enter the word or phrase to search in the entry field.
+* Click **Search** to begin the search.
+* The results will be displayed in the text box below.
+* Use **Clear Files** to remove all selected files and start fresh.
 
 ### Output
-* The script will display the line number and file name where the word was found.
-* If the word is not found in the file, it will indicate that.
+* The application displays matches in the format:
+  'searched_word' found in 'filename.txt' on line X.
+
+* If no matches are found:
+  'searched_word' not found in any file.
+
+* If a file cannot be opened:
+  File not found: filename.txt
